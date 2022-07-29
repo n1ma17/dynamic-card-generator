@@ -1,6 +1,5 @@
-const view = document.getElementById("view");
-
-function cardGenerator(m, n) {
+function cardGenerator(m, n, id) {
+  const view = document.getElementById(id);
   const numbers = Array.from({ length: m * n }, (_, i) => i + 1);
   if (m && n) {
     for (let i = 0; i < m; i++) {
@@ -18,7 +17,7 @@ function cardGenerator(m, n) {
         row.appendChild(card);
       }
     }
-  }else alert('please insert rows and columns')
+  } else alert("please insert rows and columns");
 }
 
-cardGenerator(6, 4);
+cardGenerator(6, 4, "view");
