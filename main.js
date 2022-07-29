@@ -17,6 +17,10 @@ function cardGenerator(m, n, id) {
         row.appendChild(card);
       }
     }
+    const total = document.getElementsByClassName('card').length
+    erase = Math.floor(Math.random() * total);
+    // document.getElementsByClassName('card')[erase].remove()
+    document.getElementsByClassName('card')[erase].classList.add('removedCard')
   } else alert("please insert rows and columns");
 }
 
